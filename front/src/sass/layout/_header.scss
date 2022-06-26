@@ -44,6 +44,12 @@ header {
 
         input {
             height: 20px;
+            width: 200px;
+
+            &::placeholder {
+                color: $color-tertiary;
+                opacity: 0.5;
+            }
         }
 
         &-loop {

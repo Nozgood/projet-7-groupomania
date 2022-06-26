@@ -37,6 +37,11 @@ header {
 }
 .header__search input {
   height: 20px;
+  width: 200px;
+}
+.header__search input::placeholder {
+  color: #4e5166;
+  opacity: 0.5;
 }
 .header__search-loop {
   font-size: 1.3rem;

@@ -25,7 +25,7 @@ const Header = () => {
             </div>
             {/* search */}
             <div className="header__search">
-                <input type="search" name="search" id="search-bar" />
+                <input type="search" name="search" id="search-bar" placeholder='Rechercher une personne...'/>
                 <button className='btn'>
                     <BiSearch className='header__search-loop'/>
                 </button>
