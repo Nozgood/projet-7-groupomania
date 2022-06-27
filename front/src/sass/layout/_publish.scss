@@ -1,6 +1,7 @@
 section {
     display: flex;
     justify-content: center;
+    margin-top: 1rem;
 }
 .publish {
 
@@ -11,6 +12,7 @@ section {
         justify-content: space-between;
         align-items: center;
         padding: 1.2rem;
+        border-radius: 5px;
 
         button {
             color: $color-tertiary;
@@ -48,7 +50,6 @@ section {
 
             &::placeholder {
                 color: $color-tertiary;
-                opacity: 0.5;
                 font-size: 1rem;
             }
         }
