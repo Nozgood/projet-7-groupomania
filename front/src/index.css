@@ -176,7 +176,7 @@ section {
   padding: 1rem 1.5rem 1rem 1rem;
   background: #ffd7d7;
   font-size: 1.1rem;
-  border-radius: 5px;
+  border-radius: 5px 5px 0 0;
 }
 .coworker__content {
   display: flex;
@@ -187,10 +187,65 @@ section {
 }
 
 .chat {
-  height: 1000px;
-  background: black;
+  display: flex;
+  flex-direction: column;
+}
+.chat__container {
+  background: white;
+  height: 800px;
+  width: 100%;
+  border-radius: 5px 5px 0 0;
+}
+.chat__header {
+  display: flex;
+  align-items: center;
+  background: #ffd7d7;
+  gap: 0.5rem;
+  padding: 1rem 1.5rem 1rem 1rem;
+  border-radius: 5px 5px 0 0;
+}
+.chat__header h2 {
+  font-size: 1.1rem;
+  color: #4e5166;
+}
+.chat__header-icon {
+  color: #4e5166;
+}
+.chat__content {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0.5rem;
+}
+.chat__content-id {
+  display: flex;
+  gap: 0.5rem;
+}
+.chat__content-id--icon {
+  color: #4e5166;
+}
+.chat__content-id h3 {
+  color: #4e5166;
+}
+.chat__content-text p {
+  color: black;
+  font-size: 0.8rem;
+}
+.chat__new {
+  background: white;
+  border-radius: 0 0 5px 5px;
+  height: 1.5rem;
+  padding-left: 1rem;
+}
+.chat__new input::placeholder {
+  color: #4e5166;
+  opacity: 0.5;
 }
 
+.publication {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
 .publication__container {
   background: white;
   border-radius: 5px;
@@ -254,6 +309,7 @@ section {
 .publication__reaction-comment:hover {
   color: #ffd7d7;
   border-color: #ffd7d7;
+  background: #4e5166;
 }
 
 /*# sourceMappingURL=index.css.map */

@@ -1,4 +1,8 @@
 .publication {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
 
     &__container {
         background: white;
@@ -86,6 +90,7 @@
             &:hover {
                 color: $color-secondary;
                 border-color: $color-secondary;
+                background: $color-tertiary;
             }
         }
     }

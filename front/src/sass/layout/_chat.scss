@@ -1,4 +1,73 @@
 .chat {
-    height: 1000px;
-    background: black;
+
+    display: flex;
+    flex-direction: column;
+
+    &__container {
+        background: white;
+        height: 800px;
+        width: 100%;
+        border-radius: 5px 5px 0 0;
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+        background: $color-secondary;
+        gap: 0.5rem;
+        padding: 1rem 1.5rem 1rem 1rem;
+        border-radius: 5px 5px 0 0;
+
+        h2 {
+            font-size: 1.1rem;
+            color: $color-tertiary;
+        }
+
+        &-icon {
+            color: $color-tertiary;
+        }
+    }
+
+    &__content {
+
+        display: flex;
+        flex-direction: column;
+        margin: 1rem 0.5rem;
+
+        &-id {
+            display: flex;
+            gap: 0.5rem;
+
+            &--icon {
+                color: $color-tertiary;
+            }
+
+            h3 {
+                color: $color-tertiary;;
+            }
+        }
+
+        &-text {
+            
+            p {
+                color: black;
+                font-size: 0.8rem;
+            }
+        }
+    }
+
+    &__new {
+        background: white;
+        border-radius: 0 0 5px 5px;
+        height: 1.5rem;
+        padding-left: 1rem;
+
+        input {
+
+            &::placeholder {
+                color: $color-tertiary;
+                opacity: 0.5;
+            }
+        }
+    }
 }
