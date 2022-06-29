@@ -45,6 +45,8 @@ header {
         input {
             height: 20px;
             width: 200px;
+            border-radius: 5px;
+            padding: 0.3rem;
 
             &::placeholder {
                 color: $color-tertiary;
