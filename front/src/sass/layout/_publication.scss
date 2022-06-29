@@ -1,13 +1,12 @@
 .publication {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-
 
     &__container {
         background: white;
         border-radius: 5px;
         padding: 1rem;
+        margin-bottom: 2rem;
     }
 
     &__author {
@@ -41,6 +40,8 @@
 
     &__content {
 
+        display: flex;
+        flex-direction: column;
         p {
             color: black;
             margin: 1rem;

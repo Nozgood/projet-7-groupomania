@@ -246,12 +246,12 @@ section {
 .publication {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
 }
 .publication__container {
   background: white;
   border-radius: 5px;
   padding: 1rem;
+  margin-bottom: 2rem;
 }
 .publication__author {
   margin: 1rem;
@@ -274,6 +274,10 @@ section {
 .publication__author-text p {
   color: #4e5166;
   font-size: 0.7rem;
+}
+.publication__content {
+  display: flex;
+  flex-direction: column;
 }
 .publication__content p {
   color: black;
@@ -314,7 +318,7 @@ section {
   background: #4e5166;
 }
 
-main {
+.login {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -323,7 +327,6 @@ main {
   height: 100vh;
   gap: 1rem;
 }
-
 .login__title {
   color: #4e5166;
   font-size: 1.2rem;
@@ -403,6 +406,73 @@ main {
   background: #ffd7d7;
   color: #fd2d01;
   border-color: #fd2d01;
+}
+
+.profile__container {
+  padding: 0 2rem;
+}
+.profile__cover {
+  width: 100%;
+  border-radius: 5px;
+}
+.profile__cover img {
+  width: 100%;
+  border-radius: 5px;
+}
+.profile__infos {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+.profile__infos-visual {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: -1rem;
+  padding-left: 1rem;
+}
+.profile__infos-img {
+  border-radius: 20px;
+  overflow: hidden;
+}
+.profile__infos-img img {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  border: 5px solid #4e5166;
+}
+.profile__infos-text {
+  color: white;
+}
+.profile__infos-text h1 {
+  font-weight: normal;
+  font-size: 1.8rem;
+}
+.profile__infos--modification {
+  margin-top: 1rem;
+}
+.profile__infos--modification button {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 5px;
+  border: 1px solid #fd2d01;
+  transition: all 400ms ease;
+  color: #fd2d01;
+  background: transparent;
+}
+.profile__infos--modification button p {
+  font-size: 1rem;
+}
+.profile__infos--modification button:hover {
+  color: #4e5166;
+  background: white;
+  border-color: transparent;
+}
+.profile__publications {
+  background: #ffd7d7;
+  padding: 1rem;
 }
 
 /*# sourceMappingURL=index.css.map */
