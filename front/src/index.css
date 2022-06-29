@@ -376,6 +376,7 @@ main {
   color: #4e5166;
   height: 100%;
   font-size: 1.2rem;
+  border-radius: 0 5px 5px 0;
 }
 .login__signup {
   width: 100%;

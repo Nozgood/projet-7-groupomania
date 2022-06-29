@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../../assets/icon-left-font-monochrome-black.svg'
+import logo from '../../assets/icon-left-font-monochrome-rose-red.svg'
 import {AiFillEyeInvisible} from 'react-icons/ai';
 
 const Login = () => {
