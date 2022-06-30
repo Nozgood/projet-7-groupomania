@@ -20,7 +20,7 @@ const Header = () => {
                 </div>
                 <div className="header__nav-profile">
                     <AiOutlineUser />
-                    <a href="#profile"> Profil </a>
+                    <a href="#profile" target='_blank'> Profil </a>
                 </div>
             </div>
             {/* search */}

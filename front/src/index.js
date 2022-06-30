@@ -1,4 +1,4 @@
-import ReactDOM from 'react-dom';
-import App from './App';
+import ReactDOM from "react-dom";
+import Homepage from "./components/homepage/Homepage";
 
-ReactDOM.render(<App />, document.querySelector('#root'));
+ReactDOM.render(<Homepage />, document.querySelector("#root"));

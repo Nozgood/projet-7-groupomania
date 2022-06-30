@@ -9,7 +9,7 @@ const Profile = () => {
   return (
     <>
       <Header />
-      <main>
+      <main id='profile'>
         <div className="profile__container">
           <div className="profile__cover">
             <img src={ zoro } alt="couverture de roronoa zoro" />
