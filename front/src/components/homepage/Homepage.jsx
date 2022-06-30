@@ -1,11 +1,11 @@
-import React from "react";
-import Header from "./header/Header";
-import Coworker from "./coworker/Coworker";
-import Publish from ".//publish/Publish";
-import Publication from "./publication/Publication";
-import Chat from "./chat/Chat";
-import Footer from "./footer/Footer";
-import "../../index.css";
+import React from 'react'
+import Header from './header/Header'
+import Coworker from './coworker/Coworker'
+import Publish from './/publish/Publish'
+import Publication from './publication/Publication'
+import Chat from './chat/Chat'
+import Footer from './footer/Footer'
+import '../../index.css'
 
 const Homepage = () => {
   return (
@@ -25,7 +25,7 @@ const Homepage = () => {
       </div>
       <Footer />
     </>
-  );
-};
+  )
+}
 
-export default Homepage;
+export default Homepage
