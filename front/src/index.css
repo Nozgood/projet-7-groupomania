@@ -283,8 +283,10 @@ section {
   color: black;
   margin: 1rem;
 }
-.publication__content-img {
+.publication__content img {
+  object-fit: contain;
   width: 100%;
+  max-height: 300px;
 }
 .publication__reaction {
   display: flex;
