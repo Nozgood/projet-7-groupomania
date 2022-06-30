@@ -1,8 +1,9 @@
-import React from 'react'
-import logo from '../../../assets/icon-left-font-monochrome-white.svg'
-import { AiFillHome } from 'react-icons/ai'
-import { AiOutlineUser } from 'react-icons/ai'
-import { BiSearch } from 'react-icons/bi'
+import React from 'react';
+import logo from '../../../assets/icon-left-font-monochrome-white.svg';
+import { AiFillHome } from 'react-icons/ai';
+import { AiOutlineUser } from 'react-icons/ai';
+import { BiSearch } from 'react-icons/bi';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
@@ -12,19 +13,16 @@ const Header = () => {
         <img src={logo} alt="groupomania" />
       </div>
       {/* navigation */}
-      <div className="header__nav">
+      <nav className="header__nav">
         <div className="header__nav-home">
           <AiFillHome />
-          <a href="#home"> Accueil </a>
+          <Link to="/"> Accueil </Link>
         </div>
         <div className="header__nav-profile">
           <AiOutlineUser />
-          <a href="#profile" target="_blank">
-            {' '}
-            Profil{' '}
-          </a>
+          <Link to="profile">Profil</Link>
         </div>
-      </div>
+      </nav>
       {/* search */}
       <div className="header__search">
         <input
@@ -38,7 +36,7 @@ const Header = () => {
         </button>
       </div>
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
