@@ -1,10 +1,17 @@
+// utils / variables
 @import './utils/variables';
-@import './layout/header';
-@import './pages/home';
 @import './base/typography';
+
+// layouts
 @import './layout/publish';
 @import './layout/coworker';
 @import './layout/chat';
 @import './layout/publication';
+@import './layout/header';
+
+// pages
+@import './pages/home';
 @import './pages/login';
 @import './pages/profile';
+@import './pages//error';
+@import './pages//signup';

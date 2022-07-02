@@ -74,18 +74,30 @@
     }
 
     &__signup {
-        width: 100%;
-        padding: 0.7rem;
-        background: $color-tertiary;
-        color: white;
-        border-radius: 5px;
-        border: 1px solid transparent;
-        transition: $transition;
 
-        &:hover {
-            background: $color-secondary;
-            color: $color-tertiary;
-            border-color: $color-tertiary;
+        width: 100%;
+
+        &-btn {
+            width: 100%;
+            padding: 0.7rem;
+            background: $color-tertiary;
+            color: white;
+            border-radius: 5px;
+            border: 1px solid transparent;
+            transition: $transition;
+    
+            &:hover {
+                background: $color-secondary;
+                color: $color-tertiary;
+                border-color: $color-tertiary;
+            }
+        }
+
+        &-show {
+            width: 800px;
+            height: 800px;
+            position: absolute;
+            bottom: 0%;
         }
     }
 }

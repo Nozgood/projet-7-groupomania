@@ -1,8 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
+import Popup from 'reactjs-popup'
+import 'reactjs-popup/dist/index.css';
+import Signup from '../signup/Signup'
 import logo from '../../assets/icon-left-font-monochrome-rose-red.svg'
 import { AiFillEyeInvisible } from 'react-icons/ai'
 
 const Login = () => {
+
+
+    const [open, setOpen] = useState(false);
+    const closeModal = () => setOpen(false);
+
   return (
     <main className="login">
       <div className="login__img">
@@ -30,11 +38,15 @@ const Login = () => {
           </div>
           <input type="submit" value="SE CONNECTER" id="connect" />
         </form>
-        <a className="login__passowrd--forget" href="#home">
-          {' '}
-          Mot de passe oublié ?
-        </a>
-        <button className="login__signup"> CRÉER UN COMPTE</button>
+        <a className="login__passowrd--forget" href="#home">Mot de passe oublié ?</a>
+        <div className="login__signup">
+        <button className="login__signup-btn" onClick={()=> {setOpen(o => !o)}}> 
+          CRÉER UN COMPTE
+        </button>
+        <Popup open={open} closeOnDocumentClick onClose={closeModal}>
+          <Signup />
+        </Popup>
+      </div>
       </section>
     </main>
   )
