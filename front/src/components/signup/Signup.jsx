@@ -1,5 +1,4 @@
 import React from 'react';
-import { AiFillEyeInvisible } from 'react-icons/ai'
 
 const Signup = () => {
   return (
@@ -17,11 +16,9 @@ const Signup = () => {
       <div className="signup__password-container">
       <div className="signup__password">
         <input type="password" name="password" id="password" placeholder="Mot de passe" className='signup__password-input'/>
-        <AiFillEyeInvisible className='signup__password-icon'/>
       </div>
       <div className="signup__password">
         <input type="password" name="password" id="password" placeholder="Confirmer" className='signup__password-input'/>
-        <AiFillEyeInvisible className='signup__password-icon'/>
       </div>
       </div>
       <div className="signup__submit">

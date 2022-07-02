@@ -71,16 +71,8 @@
 
         &-container {
             display: flex;
-        }
-
-        &-icon {
-            color: $color-tertiary;
-            position: relative;
-            right: 20%;
-        }
-
-        &-input {
-
+            justify-content: space-between;
+            gap: 1rem;
         }
     }
 

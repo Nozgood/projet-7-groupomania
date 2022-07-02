@@ -560,11 +560,8 @@ header {
 }
 .signup__password-container {
   display: flex;
-}
-.signup__password-icon {
-  color: #4e5166;
-  position: relative;
-  right: 20%;
+  justify-content: space-between;
+  gap: 1rem;
 }
 .signup__submit {
   width: 100%;
