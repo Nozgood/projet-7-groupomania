@@ -5,7 +5,6 @@ import Coworker from './coworker/Coworker'
 import Publish from './/publish/Publish'
 import Publication from './publication/Publication'
 import Chat from './chat/Chat'
-import Footer from './footer/Footer'
 import '../../index.css'
 
 const Homepage = () => {
@@ -24,7 +23,6 @@ const Homepage = () => {
           <Chat />
         </div>
       </div>
-      <Footer />
     </>
   )
 }

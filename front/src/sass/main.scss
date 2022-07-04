@@ -8,10 +8,12 @@
 @import './layout/chat';
 @import './layout/publication';
 @import './layout/header';
+@import './layout//signup';
+@import './layout/updateProfile';
 
 // pages
 @import './pages/home';
 @import './pages/login';
 @import './pages/profile';
 @import './pages//error';
-@import './pages//signup';
+

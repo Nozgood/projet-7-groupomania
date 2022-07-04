@@ -1,11 +1,20 @@
-import React from 'react'
-import Header from '../homepage/header/Header'
+import React, { useState } from 'react'
+import Popup from 'reactjs-popup'
+import 'reactjs-popup/dist/index.css';
+
 import zoro from '../../assets/roronoa-zoro.jpeg'
 import zoroProfile from '../../assets/zoro-profile.jpeg'
 import { RiToolsFill } from 'react-icons/ri'
+
+import Header from '../homepage/header/Header'
 import Publication from '../homepage/publication/Publication'
+import UpdateProfile from './UpdateProfile'; 
 
 const Profile = () => {
+
+  const [open, setOpen] = useState(false);
+  const closeModal = () => setOpen(false);
+
   return (
     <>
       <Header />
@@ -24,10 +33,13 @@ const Profile = () => {
               </div>
             </div>
             <div className="profile__infos--modification">
-              <button type="submit">
+              <button type="submit" onClick={()=> {setOpen(o => !o)}}>
                 <RiToolsFill className="profile__infos--modification-icon" />
                 <p className="profile__modification-text">Modifier le profil</p>
               </button>
+              <Popup open={open} closeOnDocumentClick onClose={closeModal}>
+                <UpdateProfile />
+              </Popup>
             </div>
           </div>
         </div>
