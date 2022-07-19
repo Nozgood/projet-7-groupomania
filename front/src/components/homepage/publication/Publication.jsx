@@ -5,6 +5,7 @@ import { BiComment } from 'react-icons/bi'
 import Bob from '../../../assets/Bob-leponge.png'
 
 const Publication = () => {
+
   return (
     <section>
       <div className="publication">

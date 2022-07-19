@@ -7,6 +7,7 @@ import Homepage from './components/homepage/Homepage';
 import Profile from './components/profile/Profile';
 import UpdateProfile from './components/profile/UpdateProfile';
 import Error from './components/error/Error';
+import Test from './components/test/Test';
 
 const rootElement = document.getElementById('root');
 render(
@@ -18,6 +19,7 @@ render(
       <Route path="login" element={<Login />} />
       <Route path="profile" element={<Profile />} />
       <Route path="updateprofile" element={<UpdateProfile />} />
+      <Route path='test' element={<Test />} />
     </Routes>
   </BrowserRouter>,
   rootElement
