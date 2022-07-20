@@ -7,7 +7,7 @@ const Publish = () => {
     <section>
       <div className="publish__container">
         <AiOutlineUser className="publish__img" />
-        <div className="publish__content">
+        <form className="publish__content">
           <input
             type="text"
             name="publish-content"
@@ -15,8 +15,8 @@ const Publish = () => {
             placeholder="Quoi de neuf ?"
           />
           <AiOutlineCamera className="publish__content-camera" />
-        </div>
-        <button className="btn"> Publier</button>
+          <button className="btn" type='submit'> Publier</button>
+        </form>
       </div>
     </section>
   )

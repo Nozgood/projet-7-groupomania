@@ -56,12 +56,13 @@ section {
 
 .publish__container {
   background: #ffd7d7;
-  width: 70vh;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1.2rem;
   border-radius: 5px;
+  gap: 1rem;
 }
 .publish__container button {
   color: #4e5166;

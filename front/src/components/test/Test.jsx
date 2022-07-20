@@ -1,32 +1,24 @@
-import React, {useEffect, useState } from 'react'
+import React, {useEffect, useState } from 'react';
+import Publish from '../homepage/publish/Publish';
 
 const Test = () => {
 
-    const [backendData, setBackendData] = useState();
+    const [backendData, setBackendData] = useState([{}]);
 
-    useEffect(() => {
     // pas oblige d'indiaquer le chemin entier grace au script proxy
-        fetch('/api')
-            .then(res => {
+        useEffect(() => { 
+            fetch('/api')
+            .then(res => 
                 res.json()
-            })
+            )
             .then(data => {
                 setBackendData(data);
             })
     }, [])
+
     return (
         <div>
-
-            {
-                (typeof backendData === 'undefined') ? (
-                    <p> Loading ...</p>
-                ) : (
-                    backendData.posts.map((data, i) => (
-                        <p key={i}> {data}</p>
-                    ))
-                )
-            }
-
+            <Publish />
         </div>
     )
 }
