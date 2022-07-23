@@ -20,18 +20,16 @@ const Login = () => {
         Groupomania, to Get In Touch With Your Coworkers !
       </h1>
       <section className="login__section">
-        <form className="login__form" action="">
+        <form className="login__form" action="/api/auth/login" method='post'>
           <input
             type="email"
-            name="mail"
-            id="login-mail"
+            name="email"
             placeholder="Adresse Mail"
           />
           <div className="login__password">
             <input
               type="password"
               name="password"
-              id="login-mdp"
               placeholder="Mot de passe ..."
             />
             <AiFillEyeInvisible className="login__password-icon" />
