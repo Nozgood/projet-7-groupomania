@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+const CORS = require('cors');
 
 // create the app 
 const app = express();
@@ -20,6 +21,8 @@ app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
     next();
 })
+
+app.use(CORS());
 
 // body parser
 // parse application/x-www-form-urlencoded
