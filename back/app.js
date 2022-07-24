@@ -1,7 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-const CORS = require('cors');
+const cors = require('cors');
 
 // create the app 
 const app = express();
@@ -22,7 +22,7 @@ app.use((req, res, next) => {
     next();
 })
 
-app.use(CORS());
+app.use(cors());
 
 // body parser
 // parse application/x-www-form-urlencoded
