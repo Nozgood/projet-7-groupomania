@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import Cookies from 'js-cookie';
+import PropTypes from 'prop-types';
 
 import Popup from 'reactjs-popup'
 import 'reactjs-popup/dist/index.css';
@@ -10,18 +12,20 @@ import { AiFillEyeInvisible } from 'react-icons/ai'
 
 import authenticate from '../../services/auth';
 
-const Login = () => {
+const Login = ({ setToken }) => {
 
-    // manage the signup popup 
+    // States management 
+    // popup management
     const [open, setOpen] = useState(false);
     const closeModal = () => setOpen(false);
 
-    // login states 
+    // login management 
     const [credentials, setCredentials] = useState({
       email : "",
       password: "",
     })
 
+    // save datas function
     const handleChange = (e) => {
       const {name, value} = e.target;
       setCredentials({
@@ -29,11 +33,15 @@ const Login = () => {
         [name] : value
       })
     }
-  
+    
+    // login verif function 
     const handleSubmit = async (event) => {
       event.preventDefault();
       try{
         await authenticate(credentials);
+        const token = localStorage.getItem('token');
+        setToken(token);
+
       } catch(err) {
         console.log(err);
       }
@@ -80,4 +88,7 @@ const Login = () => {
   )
 }
 
+Login.propTypes = {
+  setToken: PropTypes.func.isRequired
+}
 export default Login

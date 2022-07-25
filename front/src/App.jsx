@@ -10,8 +10,12 @@ import Login from './components/login/Login'
 import UpdateProfile from './components/profile/UpdateProfile'
 import Test from './components/test/Test'
 
+function setToken() {
+    localStorage.getItem('token');
+}
+
 const App = () => {
-    const [token, setToken] = useState();
+    const token = localStorage.getItem('token');
 
     if(!token) {
         return(

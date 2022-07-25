@@ -1,3 +1,5 @@
+import Cookies from 'js-cookie';
+
 const authenticate = (credentials) => {
     fetch('http://localhost:8000/api/auth/login', {
         method: 'POST',
@@ -10,7 +12,8 @@ const authenticate = (credentials) => {
             return res.json();
         })
         .then((data)=> {
-            console.log(data.token);
+            localStorage.setItem('token', data.token);
+            window.location.href = 'http://localhost:3000/';
         })
 }
 
