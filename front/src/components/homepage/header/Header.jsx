@@ -3,9 +3,15 @@ import logo from '../../../assets/icon-left-font-monochrome-white.svg';
 import { AiFillHome } from 'react-icons/ai';
 import { AiOutlineUser } from 'react-icons/ai';
 import { BiSearch } from 'react-icons/bi';
+import { BiExit } from 'react-icons/bi';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
+
+  const handleSignOut = ()=> {
+    localStorage.clear('token');
+    window.location.href = 'http://localhost:3000/';
+  }
   return (
     <header>
       {/* logo */}
@@ -33,6 +39,9 @@ const Header = () => {
         />
         <button className="btn">
           <BiSearch className="header__search-loop" />
+        </button>
+        <button className="btn" onClick={handleSignOut}>
+          <BiExit />
         </button>
       </div>
     </header>
