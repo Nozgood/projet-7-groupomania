@@ -1,5 +1,3 @@
-import Cookies from 'js-cookie';
-
 const authenticate = (credentials) => {
     fetch('http://localhost:8000/api/auth/login', {
         method: 'POST',
@@ -14,6 +12,12 @@ const authenticate = (credentials) => {
         .then((data)=> {
             localStorage.setItem('token', data.token);
             window.location.href = 'http://localhost:3000/';
+
+            if(data.isAdmin) {
+                localStorage.setItem('admin', 1);
+            } else {
+                localStorage.setItem('admin', 0);
+            }
         })
 }
 

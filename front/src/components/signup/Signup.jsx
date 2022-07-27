@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+
 import newUser from '../../services/newUser';
 
 const Signup = () => {
@@ -12,6 +13,7 @@ const Signup = () => {
     passwordConfirm: '',
   })
 
+  // listen the input changes
   const handleChange = (e)=> {
     const {name, value} = e.target;
     setUserInfos({
@@ -20,6 +22,7 @@ const Signup = () => {
     })
   }
 
+  //function when submit the form
   const handleSubmit = (event) => {
     event.preventDefault();
     try {
@@ -29,8 +32,17 @@ const Signup = () => {
       console.log(err);
     }
   }
+
+  // to close the popup
+  const close = ()=> {
+    window.location.href = 'http://localhost:3000';
+  }
+
   return (
     <div className="signup__container">
+      <button className="signup__exit" onClick={close}>
+        X
+      </button>
       <h1 className="signup__title">S'inscrire</h1>
       <h2 className="signup__subtitle">Pour rejoindre la communauté !</h2>
       <form className="signup__form" onSubmit={handleSubmit}>

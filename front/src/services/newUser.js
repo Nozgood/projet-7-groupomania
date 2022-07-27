@@ -6,11 +6,9 @@ const newUser = (userInfos) => {
         },
         body: JSON.stringify(userInfos)
     })
-    .then((res)=> {
-        return res.json();
-    })
-    .then((data)=> {
-        console.log(data);
+    .then(()=> {
+        window.location.href= 'http://localhost:3000';
+        alert('Vous venez de créer votre compte !')
     })
 }
 

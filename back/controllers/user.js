@@ -42,6 +42,7 @@ exports.login = (req, res, next)=> {
                                 ),
                                 userSurname: user.userSurname,
                                 userName: user.userName,
+                                isAdmin: user.isAdmin,
                             })
                         }
                     })

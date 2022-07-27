@@ -1,6 +1,5 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { useState } from 'react'
 
 import Homepage from './components/homepage/Homepage'
 import Error from './components/error/Error'

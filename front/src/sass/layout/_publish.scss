@@ -6,6 +6,8 @@ section {
 .publish {
 
     &__container {
+
+        position: sticky;
         background: $color-secondary;
         width: 100%;
         display: flex;
@@ -44,7 +46,7 @@ section {
         align-items: center;
         gap: 0.6rem;
 
-        input {
+        &-text {
             width: 400px;
             height: 30px;
             padding-left: 0.4rem;
@@ -55,19 +57,34 @@ section {
             }
         }
 
-        &-camera {
-            color: $color-secondary;
-            font-size: 2rem;
-            border: 1px solid transparent;
-            background: $color-tertiary;
-            border-radius: 20px;
-            padding: 0 2px;
+        &-file {
+
             transition: $transition;
 
+            &--input {
+                position: absolute;
+                top: 32%;
+                width: 20px;
+                right: 18%;
+                opacity: 0;
+            }
+
+            &--camera {
+                color: $color-secondary;
+                font-size: 2rem;
+                border: 1px solid transparent;
+                background: $color-tertiary;
+                border-radius: 20px;
+                padding: 0 2px;
+                transition: $transition;
+            }
+
             &:hover {
-                color: $color-tertiary;
-                background: $color-secondary;
-                border: $color-tertiary;
+                .publish__content-file--camera {
+                    color: $color-tertiary;
+                    background: $color-secondary;
+                    border: $color-tertiary;
+                }
             }
         }
     }

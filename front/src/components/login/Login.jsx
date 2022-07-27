@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import Cookies from 'js-cookie';
 import PropTypes from 'prop-types';
 
 import Popup from 'reactjs-popup'
@@ -18,7 +17,7 @@ const Login = ({ setToken }) => {
     // popup management
     const [open, setOpen] = useState(false);
     const closeModal = () => setOpen(false);
-
+  
     // login management 
     const [credentials, setCredentials] = useState({
       email : "",
@@ -89,6 +88,6 @@ const Login = ({ setToken }) => {
 }
 
 Login.propTypes = {
-  setToken: PropTypes.func.isRequired
+  setToken: PropTypes.func.isRequired,
 }
 export default Login

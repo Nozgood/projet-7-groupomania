@@ -1,6 +1,14 @@
 .signup {
 
+    &__exit {
+        color: black;
+        position: absolute;
+        top: 10%;
+        right: 5%;
+        background: transparent;
+    }
     &__container {
+        position: static;
         display: flex;
         flex-direction: column;
         align-items: center;

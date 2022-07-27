@@ -7,6 +7,14 @@
         border-radius: 5px;
         padding: 1rem;
         margin-bottom: 2rem;
+        position: sticky;
+    }
+
+    &__options {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        background: transparent;
     }
 
     &__author {

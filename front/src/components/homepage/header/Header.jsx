@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 const Header = () => {
 
   const handleSignOut = ()=> {
-    localStorage.clear('token');
+    localStorage.clear('token', 'admin');
     window.location.href = 'http://localhost:3000/';
   }
   return (

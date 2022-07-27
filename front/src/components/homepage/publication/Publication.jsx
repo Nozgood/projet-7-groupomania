@@ -3,6 +3,7 @@ import { AiOutlineUser } from 'react-icons/ai'
 import { BiLike } from 'react-icons/bi'
 import { BiComment } from 'react-icons/bi'
 import Bob from '../../../assets/Bob-leponge.png'
+import { BsThreeDots } from 'react-icons/bs';
 
 const Publication = () => {
 
@@ -10,6 +11,9 @@ const Publication = () => {
     <section>
       <div className="publication">
         <div className="publication__container">
+          <button className="publication__options">
+            <BsThreeDots className='publication__options-icon'/>
+          </button>
           <div className="publication__author">
             <AiOutlineUser className="publication__author-img" />
             <div className="publication__author-text">
@@ -37,6 +41,9 @@ const Publication = () => {
           </div>
         </div>
         <div className="publication__container">
+        <button className="publication__options">
+            <BsThreeDots className='publication__options-icon'/>
+          </button>
           <div className="publication__author">
             <AiOutlineUser className="publication__author-img" />
             <div className="publication__author-text">
