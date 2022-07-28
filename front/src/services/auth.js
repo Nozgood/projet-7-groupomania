@@ -11,7 +11,8 @@ const authenticate = (credentials) => {
         })
         .then((data)=> {
             localStorage.setItem('token', data.token);
-            window.location.href = 'http://localhost:3000/';
+            localStorage.setItem('userId', data.userId);
+            window.location.href='http://localhost:3000';
 
             if(data.isAdmin) {
                 localStorage.setItem('admin', 1);

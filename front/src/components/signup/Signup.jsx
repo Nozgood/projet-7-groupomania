@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-
 import newUser from '../../services/newUser';
 
 const Signup = () => {
@@ -24,12 +23,18 @@ const Signup = () => {
 
   //function when submit the form
   const handleSubmit = (event) => {
+
     event.preventDefault();
-    try {
+    if(userInfos.password !== userInfos.passwordConfirm) {
+      return alert('vous avez saisi deux mots de passe différents')
+    } else {
+
+      try {
         newUser(userInfos);
-  
+
     } catch(err) {
       console.log(err);
+    }
     }
   }
 

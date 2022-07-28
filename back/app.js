@@ -1,6 +1,5 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const bodyParser = require('body-parser');
 const cors = require('cors');
 
 // create the app 
@@ -11,8 +10,9 @@ app.listen(8000, ()=> {
     console.log('server listen on port 8000');
 })
 
-// routes 
+// ROUTES 
 const userRoutes = require('./routes/user');
+const postRoutes = require('./routes/post');
 
 // CORS management 
 app.use((req, res, next) => {
@@ -24,12 +24,8 @@ app.use((req, res, next) => {
 
 app.use(cors());
 
-// body parser
-// parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: false }));
-
 // parse application/json
-app.use(bodyParser.json());
+app.use(express.json());
 
 
 // connection to database (mongoDB)
@@ -43,5 +39,8 @@ mongoose.connect('mongodb+srv://nozgood:piratage59@projet7.tkmrk.mongodb.net/?re
 
 // ALL ROUTES 
 
-// route to auth 
+// route to signup/login
 app.use('/api/auth', userRoutes);
+
+// routes for posts 
+app.use('/api/posts', postRoutes);

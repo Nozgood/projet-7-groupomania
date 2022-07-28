@@ -15,8 +15,17 @@ const Profile = () => {
   const [open, setOpen] = useState(false);
   const closeModal = () => setOpen(false);
 
-  return (
-    <>
+  const userInfos = {
+    userName : '',
+    userSurname: '',
+    profilePhoto: '',
+    coverPhoto: '',
+  }
+
+  const userId = localStorage.getItem('userId');
+
+    return (
+      <>
       <Header />
       <main id="profile">
         <div className="profile__container">
@@ -29,7 +38,7 @@ const Profile = () => {
                 <img src={zoroProfile} alt="profil zoro" />
               </div>
               <div className="profile__infos-text">
-                <h1 className="profile__infos-text-name">Roronoa Zoro</h1>
+                <h1 className="profile__infos-text-name">{userInfos.userSurname}</h1>
               </div>
             </div>
             <div className="profile__infos--modification">
@@ -48,7 +57,7 @@ const Profile = () => {
         </div>
       </main>
     </>
-  )
+    )
 }
 
 export default Profile

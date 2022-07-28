@@ -16,7 +16,7 @@ function setToken() {
 const App = () => {
     const token = localStorage.getItem('token');
 
-    if(!token) {
+    if(!token || token === 'undefined') {
         return(
             <Login setToken={setToken} />
         )

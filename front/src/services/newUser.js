@@ -8,7 +8,6 @@ const newUser = (userInfos) => {
     })
     .then(()=> {
         window.location.href= 'http://localhost:3000';
-        alert('Vous venez de créer votre compte !')
     })
 }
 

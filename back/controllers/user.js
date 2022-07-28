@@ -13,6 +13,7 @@ exports.signup = (req, res, next) => {
                 password : hash,
                 passwordConfirm : hash,
             })
+
             user.save()
                 .then( () => res.status(201).json({ message : 'utilisateur crée' }))
                 .catch(error => res.status(400).json({ error }))
@@ -51,3 +52,11 @@ exports.login = (req, res, next)=> {
         })
         .catch(error => {res.status(500).json({ error })});
 }
+
+exports.userInfos = ((req, res, next)=> {
+    User.findOne({
+        _id: req.params.id
+    })
+    .then((data)=> {res.status(200).json(data)})
+    .catch((err)=> { res.status(400).json({ err })});
+})
