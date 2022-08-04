@@ -6,11 +6,11 @@ const getOneUser = (userInfos) => {
         return res.json()
     })
     .then((data)=> {
-        userInfos.userName = data.userName;
-        userInfos.userSurname = data.userSurname;
+        userInfos.userName = data.userName + ' ' + data.userSurname;
         userInfos.profilePhoto = data.profilePhoto;
         userInfos.coverPhoto = data.coverPhoto;
-        console.log(userInfos);
     })
+    console.log(userInfos);
+    return userInfos;
 }
 export default getOneUser

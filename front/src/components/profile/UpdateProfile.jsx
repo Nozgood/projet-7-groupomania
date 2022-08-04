@@ -7,7 +7,7 @@ import zoroProfile from '../../assets/zoro-profile.jpeg'
 const UpdateProfile = () => {
     return (
         <div className="update__container">
-            <form action="" className="update">
+            <form className="update">
                 <div className="update__visual">
                     <div className="update__visual-cover">
                         <div className="update__visual-cover-content">

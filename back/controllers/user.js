@@ -12,6 +12,7 @@ exports.signup = (req, res, next) => {
                 email : req.body.email,
                 password : hash,
                 passwordConfirm : hash,
+                profilePhotoUrl: '',
             })
 
             user.save()
@@ -53,10 +54,20 @@ exports.login = (req, res, next)=> {
         .catch(error => {res.status(500).json({ error })});
 }
 
+// get single user infos to display dynamically
 exports.userInfos = ((req, res, next)=> {
     User.findOne({
         _id: req.params.id
     })
     .then((data)=> {res.status(200).json(data)})
     .catch((err)=> { res.status(400).json({ err })});
+})
+
+// update user infos (cover/profile photo ...)
+exports.userUpdate = ((req, res, next) => {
+    User.findOne({
+        _id: req.paramd.id
+    })
+        .then()
+        .catch()
 })

@@ -2,15 +2,20 @@
 
     &__container {
         padding: 0 2rem;
+        display: flex;
+        flex-direction: column;
     }
 
     &__cover {
         width: 100%;
         border-radius: 5px;
+        z-index: 0;
 
         img {
             width: 100%;
             border-radius: 5px;
+            min-height: 400px;
+            max-height: 500px;
         }
     }
 
@@ -18,7 +23,6 @@
 
         display: flex;
         justify-content: space-between;
-        margin-bottom: 2rem;
 
         &-visual {
             display: flex;
@@ -26,16 +30,18 @@
             gap: 1rem;
             margin-top: -1rem;
             padding-left: 1rem;
+            margin-bottom: 1rem;
         }
         &-img {
             border-radius: 20px;
             overflow: hidden;
+            z-index: 1;
 
             img {
                 width: 100px;
                 height: 100px;
                 border-radius: 100%;
-                border: 5px solid $color-tertiary;
+                border: 1px solid black;
             }
         }
 
@@ -79,4 +85,9 @@
         background: $color-secondary;
         padding: 1rem;
     }
+}
+
+.loading {
+    text-align: center;
+    font-size: 100px;
 }
