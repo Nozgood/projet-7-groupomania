@@ -87,7 +87,19 @@
     }
 }
 
+// while loading datas 
 .loading {
     text-align: center;
     font-size: 100px;
+}
+
+// popup (modification profile) style 
+
+
+.popup-content {
+    width: 500px;
+    height: 500px;
+    overflow-y: scroll;
+    scrollbar-color: rebeccapurple green;
+    scrollbar-width: thin;
 }

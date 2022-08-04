@@ -437,6 +437,43 @@ header {
 .update__visual {
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+.update__visual-cover-input, .update__visual-photo-input {
+  position: sticky;
+  display: flex;
+  justify-content: center;
+}
+.update__visual-cover-input-content, .update__visual-photo-input-content {
+  width: 40px;
+  z-index: 1;
+  opacity: 0;
+}
+.update__visual-cover-input--icon, .update__visual-photo-input--icon {
+  position: absolute;
+  z-index: 0;
+  font-size: 20px;
+  color: #4e5166;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  transition: all 400ms ease;
+}
+.update__visual-cover-input:hover .update__visual-cover-input--icon, .update__visual-photo-input:hover .update__visual-cover-input--icon {
+  border-color: #fd2d01;
+  color: #fd2d01;
+  transform: scale(1.2);
+}
+.update__visual-cover-input:hover .update__visual-photo-input--icon, .update__visual-photo-input:hover .update__visual-photo-input--icon {
+  border-color: #fd2d01;
+  color: #fd2d01;
+  transform: scale(1.2);
+}
+.update__visual-photo-icon, .update__visual-cover-icon {
+  font-size: 20px;
+  color: #4e5166;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  transition: all 400ms ease;
 }
 .update__visual-cover {
   margin: 1rem;
@@ -457,18 +494,6 @@ header {
   font-weight: normal;
   font-size: 1rem;
 }
-.update__visual-cover-icon {
-  font-size: 20px;
-  color: #4e5166;
-  border: 1px solid transparent;
-  border-radius: 20px;
-  transition: all 400ms ease;
-}
-.update__visual-cover-icon:hover {
-  border-color: #fd2d01;
-  color: #fd2d01;
-  transform: scale(1.2);
-}
 .update__visual-photo {
   margin: 1rem;
   display: flex;
@@ -477,7 +502,7 @@ header {
   gap: 0.5rem;
   border-radius: 20px;
   overflow: hidden;
-  padding-bottom: 1rem;
+  padding-bottom: 10px;
 }
 .update__visual-photo img {
   width: 100px;
@@ -489,18 +514,6 @@ header {
   color: #4e5166;
   font-weight: normal;
   font-size: 1rem;
-}
-.update__visual-photo-icon {
-  font-size: 20px;
-  color: #4e5166;
-  border: 1px solid transparent;
-  border-radius: 20px;
-  transition: all 400ms ease;
-}
-.update__visual-photo-icon:hover {
-  border-color: #fd2d01;
-  color: #fd2d01;
-  transform: scale(1.2);
 }
 .update__infos {
   display: flex;
@@ -746,6 +759,14 @@ header {
 .loading {
   text-align: center;
   font-size: 100px;
+}
+
+.popup-content {
+  width: 500px;
+  height: 500px;
+  overflow-y: scroll;
+  scrollbar-color: rebeccapurple green;
+  scrollbar-width: thin;
 }
 
 .error {

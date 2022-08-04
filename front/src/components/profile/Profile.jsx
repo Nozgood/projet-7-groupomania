@@ -2,10 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Popup from 'reactjs-popup'
 import 'reactjs-popup/dist/index.css';
 
-import zoro from '../../assets/roronoa-zoro.jpeg'
-import zoroProfile from '../../assets/zoro-profile.jpeg'
 import { RiToolsFill } from 'react-icons/ri'
-import { BiLayout } from 'react-icons/bi';
 import defaultProfilePhoto from '../../assets/default-profile-photo.svg';
 import defaultCoverPhoto from '../../assets/icon-left-font.svg';
 
@@ -13,7 +10,6 @@ import Header from '../homepage/header/Header'
 import Publication from '../homepage/publication/Publication'
 import UpdateProfile from './UpdateProfile'; 
 
-import oneUser from '../../services/oneUser';
 
 const Profile =  () => {
 
@@ -70,7 +66,7 @@ const Profile =  () => {
               </div>
             </div>
             <div className="profile__infos--modification">
-              <button type="submit" onClick={()=> {setOpen(o => !o)}}>
+              <button onClick={()=> {setOpen(o => !o)}}>
                 <RiToolsFill className="profile__infos--modification-icon" />
                 <p className="profile__modification-text">Modifier le profil</p>
               </button>
