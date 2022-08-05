@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react'
 import { AiOutlineCamera } from 'react-icons/ai'
 import defaultProfilePhoto from '../../assets/default-profile-photo.svg';
 import defaultCoverPhoto from '../../assets/icon-left-font.svg';
+import updateProfile from '../../services/updateProfile';
 
 const UpdateProfile = () => {
 
@@ -10,9 +11,10 @@ const UpdateProfile = () => {
     const [data, setData] = useState({
         userName: '',
         userSurname: '',
-        profilePhoto: '',
+        profilePhotoUrl: '',
         coverPhoto: '',
     })
+
 
     useEffect(()=> {
         const userId = localStorage.getItem('userId');
@@ -28,28 +30,36 @@ const UpdateProfile = () => {
             })
     }, [])
 
+    // update userinfos each time input change 
     const handleChange = (e) => {
         const {name, value} = e.target;
         setData({
             ...data,
             [name]: value
         })
+        console.log(data);
     }
 
-    const handleSubmit = (event)=> {
+    const handleSubmit = async (event)=> {
         event.preventDefault();
-
+        try{
+            console.log(data);
+            await updateProfile(data)
+        }catch(err) {
+            console.log(err);
+        }
     }
     // close the popup
     const close = ()=> {
         window.location.href = 'http://localhost:3000/profile'
     }
+
     return (
         <div className="update__container">
             <button className="signup__exit" onClick={close}>
                 X
             </button>
-            <form className="update">
+            <form className="update" onSubmit={handleSubmit}>
                 <div className="update__visual">
                     <div className="update__visual-cover">
                         <div className="update__visual-cover-content">
@@ -85,7 +95,7 @@ const UpdateProfile = () => {
                         <div className="update__visual-photo-input">
                             <input 
                                 type="file" 
-                                name="profilePhoto"
+                                name="profilePhotoUrl"
                                 accept='.jpeg, .jpg, .png, .gif, .svg'
                                 className='update__visual-photo-input-content'
                                 onChange={handleChange}
@@ -116,7 +126,7 @@ const UpdateProfile = () => {
                 </div>
                 <div className="update__buttons">
                     <input type="submit" value="ENREGISTRER" className='update__buttons-submit' />
-                    <button className="update__buttons-cancel"> ANNULER </button>
+                    <button className="update__buttons-cancel" onClick={close}> ANNULER </button>
                 </div>
             </form>
         </div>

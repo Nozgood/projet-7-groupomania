@@ -65,9 +65,23 @@ exports.userInfos = ((req, res, next)=> {
 
 // update user infos (cover/profile photo ...)
 exports.userUpdate = ((req, res, next) => {
+    const oldUser = req.file ? {
+        ...JSON.parse(req.body.data),
+        profilePhotoUrl: `${req.protocol}://${req.get('host')}/images/${req.file.filename}`,
+    } : {
+        ...req.body
+    };
     User.findOne({
-        _id: req.paramd.id
+        _id: req.params.id
     })
-        .then()
-        .catch()
+    .then((user)=> {
+        if(user.userId != req.auth.userId) {
+            res.status(400).json({ message : 'Non-autorisé' })
+        } else {
+            User.updateOne({ _id: req.params.id}, {...oldUser, _id: req.params.id })
+                .then(()=> res.status(200).json({ message : 'User modifié' }))
+                .catch((err)=> res.status(401).json({ err }));
+        }
+    })
+    .catch((err)=> res.status(400).json({ err }));
 })
